@@ -20,7 +20,7 @@ Before any data is transmitted, **a TCP connection must be established using a 3
 2. **SYN-ACK**: Server responds with a SYN-ACK packet to acknowledge the request and send its own sequence number.
 3. **ACK**: Client sends an ACK back to confirm the connection.
 
-CLIENT                                 SERVER
+CLIENT                                 SERVER        
   | -------- SYN (SEQ=X) -----------> |      
   | <------ SYN-ACK (SEQ=Y, ACK=X+1) |     
   | --------- ACK (ACK=Y+1) --------> |      
@@ -56,7 +56,7 @@ TLS is **not a replacement for TCP** — it **sits on top of TCP** and ensures t
 5. **Finished**
    - Both parties send a “Finished” message to verify the handshake and begin secure communication.
 
-CLIENT                                SERVER
+CLIENT                                SERVER           
   | ---- ClientHello ---------------> |        
   | <----- ServerHello -------------- |        
   | <----- Certificate -------------- |        
