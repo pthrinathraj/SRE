@@ -1,74 +1,105 @@
-🧠 SRE Tools & Technologies – Categorized Overview
-⚙️ Core SRE & DevOps Tools
-Linux – Foundation of most infrastructure; scripting, performance tuning, and troubleshooting.
+# 📘 Site Reliability Engineering (SRE) – Tools & Technologies
 
-Git – Source control and collaboration.
+This document outlines the core tools, technologies, and practices essential for modern Site Reliability Engineers (SREs). Tools are grouped by category and aligned with real-world responsibilities across reliability, automation, observability, security, and infrastructure.
 
-Jenkins – CI/CD automation.
+---
 
-Maven / Gradle – Build tools for Java-based applications.
+## ⚙️ Core SRE & DevOps Tools
 
-Ansible – Configuration management and automation.
+| Tool/Technology | Description |
+|-----------------|-------------|
+| **Linux**       | Foundation for server administration, scripting, performance tuning, and debugging. |
+| **Git**         | Distributed version control system for source code management and collaboration. |
+| **Jenkins**     | Automation server used to build, test, and deploy CI/CD pipelines. |
+| **Maven / Gradle** | Build tools for Java-based applications; dependency and lifecycle management. |
+| **Ansible**     | Agentless configuration management and automation using YAML playbooks. |
+| **Terraform**   | Infrastructure as Code (IaC) tool to provision and manage cloud resources. |
+| **Helm**        | Kubernetes package manager for deploying, upgrading, and managing applications. |
+| **GitOps (ArgoCD, Flux)** | Git-driven operations and continuous delivery for Kubernetes workloads. |
 
-Terraform – Infrastructure as Code (IaC) for provisioning and managing cloud resources.
+---
 
-Helm – Kubernetes package manager.
+## 🐳 Containerization & Orchestration
 
-GitOps Tools (e.g., ArgoCD, Flux) – Git-driven operations for Kubernetes.
+| Tool/Technology | Description |
+|-----------------|-------------|
+| **Docker**      | Platform to build, package, and run containerized applications. |
+| **Kubernetes**  | Orchestration platform for containerized workloads and services. |
+| **Istio**       | Service mesh for advanced traffic routing, observability, and security in Kubernetes. |
+| **Helm**        | (Also listed above) Package manager for Kubernetes applications. |
+| **Service Discovery** | Dynamically registers and locates microservices (e.g., Kubernetes DNS, Consul). |
 
-🐳 Containerization & Orchestration
-Docker – Containerization platform.
+---
 
-Kubernetes – Container orchestration platform.
+## 📊 Observability: Monitoring, Logging, and Alerting
 
-Istio – Service mesh for traffic management, security, and observability.
+| Tool/Technology | Description |
+|-----------------|-------------|
+| **Prometheus**  | Monitoring and alerting toolkit with time-series data collection. |
+| **Grafana**     | Open-source platform for visualizing metrics from various data sources. |
+| **Alertmanager / Sensu** | Alert routing and deduplication system often used with Prometheus. |
+| **Splunk**      | Log aggregation, analysis, and visualization platform. |
+| **ELK Stack**   | Elasticsearch, Logstash, and Kibana for log management and analytics. |
+| **Monitoring & Alerting** | Strategies and tools to ensure system health and uptime. |
+| **Logging & Log Management** | Centralized log storage, indexing, and querying. |
 
-Helm – Kubernetes application deployment.
+---
 
-Service Discovery – Dynamic registration and lookup (built-in to Kubernetes, or Consul, etc).
+## ☁️ Cloud Platforms & Infrastructure
 
-📊 Observability: Monitoring, Logging, Alerting
-Prometheus – Monitoring and alerting toolkit.
+| Tool/Technology | Description |
+|-----------------|-------------|
+| **AWS**         | Widely used cloud service provider; includes compute, storage, networking, and more. |
+| **Networking**  | Core concepts such as TCP/IP, DNS, VPNs, Subnetting, NAT, firewalls, etc. |
+| **Load Balancing (HAProxy, Envoy)** | Distributes network traffic across multiple servers or services. |
+| **Secrets Management (Vault, AWS Secrets Manager)** | Secure storage and access of sensitive data. |
+| **Configuration Management (Puppet, Chef)** | Automates system configuration across infrastructure. |
+| **Infrastructure Automation** | Provisioning and management using code and automation tools. |
 
-Grafana – Visualization and dashboarding.
+---
 
-Alertmanager / Sensu – Alerting and incident routing.
+## 🔐 Security & Resilience
 
-Splunk / ELK Stack (Elasticsearch, Logstash, Kibana) – Logging and analysis.
+| Tool/Technology | Description |
+|-----------------|-------------|
+| **Container Security (Trivy, Aqua)** | Scanning, vulnerability detection, and runtime protection. |
+| **Secrets Management** | Secure handling of tokens, passwords, and credentials. |
 
-Monitoring & Alerting – Strategies for availability and performance.
+---
 
-Logging & Log Management – Centralized log collection and analysis.
+## 🛠️ Developer Experience & Pipelines
 
-☁️ Cloud Platforms & Infrastructure
-AWS – Common cloud provider; use of EC2, S3, VPC, IAM, Lambda, etc.
+| Tool/Technology | Description |
+|-----------------|-------------|
+| **CI/CD Pipelines** | Automate software delivery from development to production. |
+| **GitOps**      | Operational model using Git as the source of truth for infrastructure and applications. |
+| **Build Tools (Maven, Gradle)** | (Also listed above) Application builds and dependency management. |
 
-Networking – TCP/IP, DNS, Load Balancing, VPNs, Subnetting, etc.
+---
 
-Load Balancing (HAProxy, Envoy) – High availability and request distribution.
+## 🚨 Incident Management & Reliability
 
-Secrets Management (Vault, AWS Secrets Manager) – Secure storage and access of secrets.
+| Tool/Technology | Description |
+|-----------------|-------------|
+| **PagerDuty / Blameless** | On-call alerting, incident management, and postmortems. |
+| **Incident Management & RCA** | Frameworks to respond to incidents and analyze root causes. |
 
-Configuration Management (Puppet, Chef) – Traditional CM tools.
+---
 
-Infrastructure Automation – IaC and lifecycle management.
+## 🗃️ Databases
 
-🔐 Security & Resilience
-Container Security (Trivy, Aqua) – Image scanning, runtime protection.
+| Type | Examples |
+|------|----------|
+| **SQL** | MySQL, PostgreSQL |
+| **NoSQL** | MongoDB, Cassandra |
+| **In-Memory** | Redis, Memcached |
 
-Secrets Management (Vault, AWS Secrets Manager) – Secure handling of credentials and tokens.
+---
 
-🛠️ Developer Experience & Pipelines
-CI/CD Pipelines – Concepts, patterns, and tools for continuous delivery.
+## ✅ How to Use This Guide
 
-GitOps – Operational workflows powered by Git.
-
-Build Tools (Maven, Gradle) – Managing application builds and dependencies.
-
-🚨 Incident Management & Reliability
-PagerDuty / Blameless – On-call alerting and postmortems.
-
-Incident Management & RCA – Detecting, resolving, and documenting incidents.
-
-🗃️ Databases
-SQL / NoSQL / In-Memory – Examples: MySQL, PostgreSQL, MongoDB, Redis.
+Use this document to:
+- **Map your expertise** across critical SRE areas.
+- **Build structured learning paths** or internal training docs.
+- **Prepare for interviews** and team discussions.
+- **Plan observability, automation, and CI/CD strategies. |
